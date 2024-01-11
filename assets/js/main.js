@@ -181,43 +181,14 @@ projectBoxes.forEach((box) => {
   });
 });
 
-// Send Message function
-function sendMessage() {
-  const name = document.getElementById('nameInput').value;
-  const email = document.getElementById('emailInput').value;
-  const message = document.getElementById('messageInput').value;
 
-  // Validate input (you may want to add more robust validation)
-  if (!name || !email || !message) {
-    alert('Please fill in all fields');
-    return;
+// Scrolltop
+const scrolltop = document.getElementById("scrolltop");
+
+window.addEventListener("scroll", () => {
+  if (this.scrollY >= 300) {
+    scrolltop.classList.add("scrolltop--show");
+  } else {
+    scrolltop.classList.remove("scrolltop--show");
   }
-
-  // Prepare the data to be sent to the server
-  const data = {
-    name,
-    email,
-    message
-  };
-
-  // Send a POST request to the server
-  fetch('/send-message', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(response => response.json())
-    .then(data => {
-      alert('Message sent successfully!');
-      // You can add more logic here if needed
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      alert('An error occurred while sending the message.');
-    });
-}
-
-// Add an event listener for the Send Message button
-document.getElementById('sendMessageBtn').addEventListener('click', sendMessage);
+});
