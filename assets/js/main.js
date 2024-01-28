@@ -176,6 +176,8 @@ window.addEventListener("scroll", () => {
 });
 
 // Ensure EmailJS is loaded and initialized properly
+/* Initialize EmailJS */
+emailjs.init("mXUCOBIqnXQmniEnZ");
 
 /* Form Submission */
 document.getElementById("contact-form").addEventListener("submit", function (event) {
@@ -193,8 +195,6 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
   }
 });
 
-/* Initialize EmailJS */
-emailjs.init("mXUCOBIqnXQmniEnZ");
 
 /* Form Submission with EmailJS */
 function initiateEmail(event) {
