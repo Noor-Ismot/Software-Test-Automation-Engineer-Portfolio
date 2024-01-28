@@ -192,22 +192,16 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 });
 
 /*------------Form Functions -------*/
+
 function initiateEmail(event) {
   event.preventDefault(); // Prevent the default form submission behavior
-  console.log('Email initiated');
 
   // Get the form data
   const formData = {
-    from_name: document.getElementById('name').value,
-    from_email: document.getElementById('email').value,
-    message: document.getElementById('message').value,
+    from_name: document.getElementById("name").value,
+    from_email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
   };
-
-  // Check if any form field is empty
-  if (!formData.from_name || !formData.from_email || !formData.message) {
-    document.getElementById('required-message').style.display = 'block';
-    return; // Exit the function if any field is empty
-  }
 
   // Send the email using EmailJS
   emailjs.send('service_5ic9y38', 'template_1uxonis', formData)
@@ -215,16 +209,13 @@ function initiateEmail(event) {
       console.log('SUCCESS!', response.status, response.text);
       alert('Your message has been sent successfully!');
       document.getElementById("contact-form").reset(); // Reset the form after successful submission
-      document.getElementById('required-message').style.display = 'none'; // Hide the required message
-    })
-    .catch(function (error) {
+    }, function (error) {
       console.log('FAILED...', error);
       alert('Oops! Something went wrong. Please try again later.');
     });
 }
 
-// Add event listener to the form submit event
-document.getElementById("contact-form").addEventListener("submit", initiateEmail);
+document.getElementById("submit-btn").addEventListener("click", initiateEmail);
 
 
 
