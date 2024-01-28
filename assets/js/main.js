@@ -191,6 +191,8 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
   }
 });
 
+
+emailjs.init("mXUCOBIqnXQmniEnZ");
 /*------------Form Functions -------*/
 
 function initiateEmail(event) {
