@@ -192,9 +192,8 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 });
 
 /*------------Form Functions -------*/
-function initiateEmail() {
+function initiateEmail(event) {
   event.preventDefault(); // Prevent the default form submission behavior
-  console.log("Form submitted!");
 
   // Get the form data
   const formData = {
@@ -203,19 +202,29 @@ function initiateEmail() {
     message: document.querySelector('#contact-form textarea').value,
   };
 
+  // Check if any form field is empty
+  if (!formData.from_name || !formData.from_email || !formData.message) {
+    document.getElementById('required-message').style.display = 'block';
+    return; // Exit the function if any field is empty
+  }
+
   // Send the email using EmailJS
   emailjs.send('service_5ic9y38', 'template_1uxonis', formData)
     .then(function (response) {
       console.log('SUCCESS!', response.status, response.text);
       alert('Your message has been sent successfully!');
       document.getElementById("contact-form").reset(); // Reset the form after successful submission
-    }, function (error) {
+      document.getElementById('required-message').style.display = 'none'; // Hide the required message
+    })
+    .catch(function (error) {
       console.log('FAILED...', error);
       alert('Oops! Something went wrong. Please try again later.');
     });
 }
 
+// Add event listener to the form submit event
 document.getElementById("contact-form").addEventListener("submit", initiateEmail);
+
 
 
 
