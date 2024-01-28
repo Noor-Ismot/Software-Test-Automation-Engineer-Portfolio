@@ -175,15 +175,31 @@ window.addEventListener("scroll", () => {
   }
 });
 
+/* Form Submission */
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+  var nameInput = document.querySelector('#contact-form input[type="text"]');
+  var emailInput = document.querySelector('#contact-form input[type="email"]');
+  var messageTextarea = document.querySelector('#contact-form textarea');
+  var requiredMessage = document.getElementById('required-message');
+
+  if (!nameInput.value || !emailInput.value || !messageTextarea.value) {
+    requiredMessage.style.display = 'block';
+    event.preventDefault(); // Prevent form submission
+  } else {
+    requiredMessage.style.display = 'none';
+    // If all fields are filled, form submission proceeds (default behavior)
+  }
+});
+
 /*------------Form Functions -------*/
 function initiateEmail() {
   event.preventDefault(); // Prevent the default form submission behavior
 
   // Get the form data
   const formData = {
-    from_name: document.getElementById("name").value,
-    from_email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
+    from_name: document.querySelector('#contact-form input[type="text"]').value,
+    from_email: document.querySelector('#contact-form input[type="email"]').value,
+    message: document.querySelector('#contact-form textarea').value,
   };
 
   // Send the email using EmailJS
@@ -200,18 +216,5 @@ function initiateEmail() {
 
 document.getElementById("contact-form").addEventListener("submit", initiateEmail);
 
-document.getElementById('submit-btn').addEventListener('click', function (event) {
-  var nameInput = document.querySelector('#contact-form input[type="text"]');
-  var emailInput = document.querySelector('#contact-form input[type="email"]');
-  var messageTextarea = document.querySelector('#contact-form textarea');
-  var requiredMessage = document.getElementById('required-message');
 
-  if (!nameInput.value || !emailInput.value || !messageTextarea.value) {
-    requiredMessage.style.display = 'block';
-    event.preventDefault(); // Prevent form submission
-  } else {
-    requiredMessage.style.display = 'none';
-    // If all fields are filled, submit the form (default behavior)
-  }
-});
 
