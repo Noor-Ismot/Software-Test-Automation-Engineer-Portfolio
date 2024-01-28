@@ -206,7 +206,7 @@ function initiateEmail(event) {
   };
 
   // Send the email using EmailJS
-  emailjs.send('service_5ic9y38', 'template_1uxonis', formData)
+  emailjs.send('service_5ic9y38', 'template_1uxonls', formData)
     .then(function (response) {
       console.log('SUCCESS!', response.status, response.text);
       alert('Your message has been sent successfully!');
