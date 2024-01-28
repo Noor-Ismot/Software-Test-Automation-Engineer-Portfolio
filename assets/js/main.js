@@ -194,6 +194,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 /*------------Form Functions -------*/
 function initiateEmail() {
   event.preventDefault(); // Prevent the default form submission behavior
+  console.log("Form submitted!");
 
   // Get the form data
   const formData = {
