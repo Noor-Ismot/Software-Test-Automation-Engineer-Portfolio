@@ -197,9 +197,9 @@ function initiateEmail(event) {
 
   // Get the form data
   const formData = {
-    from_name: document.querySelector('#contact-form input[type="text"]').value,
-    from_email: document.querySelector('#contact-form input[type="email"]').value,
-    message: document.querySelector('#contact-form textarea').value,
+    from_name: document.getElementById('name').value,
+    from_email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
   };
 
   // Check if any form field is empty
