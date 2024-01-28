@@ -175,12 +175,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Ensure EmailJS is loaded and initialized properly
-/* Initialize EmailJS */
-emailjs.init("mXUCOBIqnXQmniEnZ");
-
 /* Form Submission */
-document.getElementById("contact-form").addEventListener("submit", function (event) {
+document.getElementById("contact-form").addEventListener("click", function (event) {
   var nameInput = document.querySelector('#contact-form input[type="text"]');
   var emailInput = document.querySelector('#contact-form input[type="email"]');
   var messageTextarea = document.querySelector('#contact-form textarea');
@@ -196,7 +192,9 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 });
 
 
-/* Form Submission with EmailJS */
+emailjs.init("mXUCOBIqnXQmniEnZ");
+/*------------Form Functions -------*/
+
 function initiateEmail(event) {
   event.preventDefault(); // Prevent the default form submission behavior
 
@@ -213,17 +211,10 @@ function initiateEmail(event) {
       console.log('SUCCESS!', response.status, response.text);
       alert('Your message has been sent successfully!');
       document.getElementById("contact-form").reset(); // Reset the form after successful submission
-    })
-    .catch(function (error) {
+    }, function (error) {
       console.log('FAILED...', error);
       alert('Oops! Something went wrong. Please try again later.');
     });
 }
 
-// Attach initiateEmail function to the form's submit event
-document.getElementById("contact-form").addEventListener("submit", initiateEmail);
-
-
-
-
-
+document.getElementById("submit-btn").addEventListener("click", initiateEmail)
