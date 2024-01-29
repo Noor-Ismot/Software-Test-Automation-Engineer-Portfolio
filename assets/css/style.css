@@ -616,7 +616,7 @@ textarea {
 }
 
 .form-button>.btn:hover {
-	background: #00B5E7;
+	background: var(--first-color);
 }
 
 .form-button i {
