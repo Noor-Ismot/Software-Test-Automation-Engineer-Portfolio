@@ -265,9 +265,9 @@ nav {
 	background: var(--first-color-hover);
 }
 
-.btn download-cv a {
+.download-cv a {
 	text-decoration: none;
-	color: var(--color-white);
+	color: inherit;
 }
 
 .social_icons {
