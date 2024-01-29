@@ -175,6 +175,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
+emailjs.init("mXUCOBIqnXQmniEnZ");
+
 /* Form Submission */
 document.getElementById("contact-form").addEventListener("submit", function (event) {
   var nameInput = document.getElementById('name');
@@ -191,8 +193,6 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
   }
 });
 
-
-emailjs.init("mXUCOBIqnXQmniEnZ");
 /*------------Form Functions -------*/
 
 function initiateEmail(event) {
