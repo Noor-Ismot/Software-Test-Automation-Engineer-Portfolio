@@ -873,4 +873,8 @@ footer {
 	.nav-menu-btn {
 		margin: auto;
 	}
+
+	.nav-menu {
+		background-color: #ffc0cb;
+	}
 }
