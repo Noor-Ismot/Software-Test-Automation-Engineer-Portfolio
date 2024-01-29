@@ -265,7 +265,7 @@ nav {
 	background: var(--first-color-hover);
 }
 
-.download-cv a {
+.download-cv {
 	text-decoration: none;
 	color: inherit;
 }
