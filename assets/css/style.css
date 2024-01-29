@@ -265,6 +265,11 @@ nav {
 	background: var(--first-color-hover);
 }
 
+.btn download-cv a {
+	text-decoration: none;
+	color: var(--color-white);
+}
+
 .social_icons {
 	display: flex;
 	margin-top: 5em;

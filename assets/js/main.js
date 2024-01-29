@@ -184,7 +184,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
   var messageTextarea = document.getElementById('message');
   var requiredMessage = document.getElementById('required-message');
 
-  if (nameInput.value == '' || emailInput.value == '' || messageTextarea.value == '') {
+  if (!nameInput.value || !emailInput.value || !messageTextarea.value) {
     requiredMessage.style.display = 'block';
     event.preventDefault(); // Prevent form submission
   } else {
