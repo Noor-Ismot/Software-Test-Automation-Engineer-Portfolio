@@ -176,13 +176,13 @@ window.addEventListener("scroll", () => {
 });
 
 /* Form Submission */
-document.getElementById("contact-form").addEventListener("click", function (event) {
-  var nameInput = document.querySelector('#contact-form input[type="text"]');
-  var emailInput = document.querySelector('#contact-form input[type="email"]');
-  var messageTextarea = document.querySelector('#contact-form textarea');
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+  var nameInput = document.getElementById('name');
+  var emailInput = document.getElementById('email');
+  var messageTextarea = document.getElementById('message');
   var requiredMessage = document.getElementById('required-message');
 
-  if (!nameInput.value || !emailInput.value || !messageTextarea.value) {
+  if (nameInput.value == '' || emailInput.value == '' || messageTextarea.value == '') {
     requiredMessage.style.display = 'block';
     event.preventDefault(); // Prevent form submission
   } else {
@@ -209,8 +209,14 @@ function initiateEmail(event) {
   emailjs.send('service_5ic9y38', 'template_1uxonls', formData)
     .then(function (response) {
       console.log('SUCCESS!', response.status, response.text);
-      alert('Your message has been sent successfully!');
-      document.getElementById("contact-form").reset(); // Reset the form after successful submission
+      // Show success message
+      document.getElementById("success-message").style.display = 'block';
+      document.getElementById("required-message").style.display = 'none';
+
+      // Reset the form
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
     }, function (error) {
       console.log('FAILED...', error);
       alert('Oops! Something went wrong. Please try again later.');
