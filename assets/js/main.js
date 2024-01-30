@@ -164,6 +164,30 @@ downloadButtons.forEach(function (button) {
 });
 
 
+
+
+// Add event listeners to each project box for opening a new link
+document.getElementById("project-box-1").addEventListener("click", function () {
+  openInNewTab("https://docs.google.com/document/d/1habiC2CES6TadaVkji-rfXaKGjltJ381VU8QSsh6-80/edit?usp=sharing");
+});
+
+document.getElementById("project-box-2").addEventListener("click", function () {
+  openInNewTab("https://docs.google.com/document/d/1vDeUN2Rwj_f4HuRLONr0qLcu_GnbgB91WRZ3fcBjCyg/edit?usp=sharing");
+});
+
+document.getElementById("project-box-3").addEventListener("click", function () {
+  openInNewTab("https://docs.google.com/spreadsheets/d/1V0HZ9YdITMSXec1P4KG510F-wUmz1moJCvjIHPnPS6I/edit?usp=sharing");
+});
+
+// Define function to open URL in new tab
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+
+
+
 // Back to top button
 const scrolltop = document.getElementById("scrolltop");
 
@@ -177,7 +201,7 @@ window.addEventListener("scroll", () => {
 
 
 
-/* Form Submission */
+// Form Submission 
 document.getElementById("contact-form").addEventListener("submit", function (event) {
   var nameInput = document.getElementById('name');
   var emailInput = document.getElementById('email');

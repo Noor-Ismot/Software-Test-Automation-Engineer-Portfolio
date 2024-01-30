@@ -495,6 +495,7 @@ h3 {
 	border-radius: 20px;
 	box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .project-box>i {
@@ -532,6 +533,7 @@ h3 {
 	color: var(--color-white);
 	z-index: 2;
 }
+
 
 /* ----- CONTACT BOX ----- */
 .contact-info {
