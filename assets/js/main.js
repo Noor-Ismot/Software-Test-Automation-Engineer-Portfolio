@@ -148,7 +148,7 @@ function initiateDownloadCV() {
   var downloadLink = document.createElement("a");
 
   // Set the download link attributes
-  downloadLink.href = "assets/images/Noor-Ismot-Ara-CV.pdf"
+  downloadLink.href = "assets/images/Noor-Ismot-Ara-SQA-CV.pdf"
   downloadLink.download = 'Noor-Ismot-Ara-CV.pdf';
 
   // Trigger a click on the anchor element
