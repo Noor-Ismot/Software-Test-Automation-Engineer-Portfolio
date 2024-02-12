@@ -148,8 +148,13 @@ function initiateDownloadCV() {
   var downloadLink = document.createElement("a");
 
   // Set the download link attributes
+  downloadLink.href = "https://docs.google.com/document/d/1zVBqTxLEx1RwMyx-QKshXYky1hyJbpkQn0yfGgcGVyU/edit?usp=sharing";
+  downloadLink.target = "_blank";
+
+  /*
   downloadLink.href = "assets/images/Noor-Ismot-Ara-CV.pdf"
   downloadLink.download = 'Noor-Ismot-Ara-CV.pdf';
+  */
 
   // Trigger a click on the anchor element
   document.body.appendChild(downloadLink);
