@@ -168,7 +168,7 @@ downloadButtons.forEach(function (button) {
 
 // Add event listeners to each project box for opening a new link
 document.getElementById("project-box-1").addEventListener("click", function () {
-  openInNewTab("https://docs.google.com/document/d/1habiC2CES6TadaVkji-rfXaKGjltJ381VU8QSsh6-80/edit?usp=sharing");
+  openInNewTab("https://docs.google.com/document/d/1Y3g8g8plAe_jgeoWJAlmU7hRVC5h3YOB0K7vXYkJzQk/edit?usp=sharing");
 });
 
 document.getElementById("project-box-2").addEventListener("click", function () {
@@ -179,11 +179,18 @@ document.getElementById("project-box-3").addEventListener("click", function () {
   openInNewTab("https://docs.google.com/document/d/1vDeUN2Rwj_f4HuRLONr0qLcu_GnbgB91WRZ3fcBjCyg/edit?usp=sharing");
 });
 
-/*
+
 document.getElementById("project-box-4").addEventListener("click", function () {
+  openInNewTab("https://docs.google.com/document/d/1habiC2CES6TadaVkji-rfXaKGjltJ381VU8QSsh6-80/edit?usp=sharing");
+});
+
+document.getElementById("project-box-5").addEventListener("click", function () {
   openInNewTab("https://docs.google.com/spreadsheets/d/1V0HZ9YdITMSXec1P4KG510F-wUmz1moJCvjIHPnPS6I/edit?usp=sharing");
 });
-*/
+
+document.getElementById("project-box-6").addEventListener("click", function () {
+  openInNewTab("https://miro.com/app/board/uXjVNuGtFCI=/?share_link_id=908629907219");
+});
 
 // Define function to open URL in new tab
 function openInNewTab(url) {
