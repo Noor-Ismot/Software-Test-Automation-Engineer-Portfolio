@@ -141,6 +141,13 @@ document.getElementById("hire-me-btn").addEventListener("click", function () {
 
 
 
+/*--------------TesterWiki Button Functionality -----------*/
+document.getElementById("tester-wiki").addEventListener("click", function () {
+  openInNewTab("https://medium.com/@ara.noor.ismot/list/testerwiki-e0d910bbaf60");
+});
+
+
+
 /*-------------Download-CV button Functionality -------- */
 
 function initiateDownloadCV() {
