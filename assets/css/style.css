@@ -859,6 +859,7 @@ footer {
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
 @media only screen and (max-width: 540px) {
+
 	.featured-name {
 		font-size: 26px;
 	}
@@ -889,4 +890,5 @@ footer {
 	.nav-menu {
 		background-color: rgba(255, 255, 255);
 	}
+
 }
