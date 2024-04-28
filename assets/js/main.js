@@ -201,7 +201,7 @@ document.getElementById("project-box-5").addEventListener("click", function () {
 });
 
 document.getElementById("project-box-6").addEventListener("click", function () {
-  openInNewTab("https://miro.com/app/board/uXjVNuGtFCI=/?share_link_id=908629907219");
+  openInNewTab("https://github.com/Noor-Ismot/Professional-Projects-Database");
 });
 
 // Define function to open URL in new tab
