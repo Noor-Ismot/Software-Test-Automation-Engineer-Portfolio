@@ -854,6 +854,10 @@ footer {
 		width: 80%;
 	}
 
+	.scrolltop i {
+		font-size: 1rem;
+	}
+
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
@@ -889,6 +893,10 @@ footer {
 */
 	.nav-menu {
 		background-color: rgba(255, 255, 255);
+	}
+
+	.scrolltop i {
+		font-size: 1rem;
 	}
 
 }
