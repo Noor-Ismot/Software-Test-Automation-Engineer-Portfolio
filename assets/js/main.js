@@ -187,22 +187,23 @@ document.getElementById("project-box-2").addEventListener("click", function () {
   openInNewTab("https://github.com/Noor-Ismot/Cypress-Ecommerce-TestSuite");
 });
 
-document.getElementById("project-box-3").addEventListener("click", function () {
-  openInNewTab("https://github.com/Noor-Ismot/Find-Weather");
-});
-
-
-document.getElementById("project-box-4").addEventListener("click", function () {
-  openInNewTab("https://github.com/Noor-Ismot/Web_Application-Case_Study");
-});
-
 document.getElementById("project-box-5").addEventListener("click", function () {
   openInNewTab("https://github.com/Noor-Ismot/Grasshopper-MobileApp-TestCase");
+});
+
+/*
+document.getElementById("project-box-3").addEventListener("click", function () {
+  openInNewTab("https://github.com/Noor-Ismot/Find-Weather");
 });
 
 document.getElementById("project-box-6").addEventListener("click", function () {
   openInNewTab("https://github.com/Noor-Ismot/Professional-Projects-Database");
 });
+
+document.getElementById("project-box-4").addEventListener("click", function () {
+  openInNewTab("https://github.com/Noor-Ismot/Web_Application-Case_Study");
+});
+*/
 
 // Define function to open URL in new tab
 function openInNewTab(url) {
