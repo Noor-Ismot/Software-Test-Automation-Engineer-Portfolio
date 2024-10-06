@@ -51,7 +51,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["A Test Automation Engineer", "ISTQB-Certified", "A Traveler"],
+  strings: ["A Software Test Engineer", "ISTQB-Certified", "A Traveler"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
